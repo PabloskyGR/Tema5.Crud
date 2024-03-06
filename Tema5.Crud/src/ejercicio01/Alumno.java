@@ -1,9 +1,7 @@
 package ejercicio01;
 
-import java.sql.Time;
-
 public class Alumno {
-
+ 
 	private String nombre = "";
 	private double notaMedia = 0;
 
