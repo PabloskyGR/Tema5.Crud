@@ -3,44 +3,36 @@ package ejercicio03;
 public class Pizza {
 
 	private int codigo;
-	private String tamanyo = "";
+	private String tamaño = "";
 	private String tipo = "";
-	private String estado = "";
+	private String estado = "Pedida";
 
 	public Pizza() {
 	}
 
-	public Pizza(int codigo, String tamanyo, String tipo) {
+	public Pizza(int codigo, String tamaño, String tipo) {
 		if (codigo > 0) {
 			this.codigo = codigo;
 		}
-		if (tamanyo != null && !tamanyo.equals("")) {
-			this.tamanyo = tamanyo;
+		if (tamaño != null && !tamaño.equals("")) {
+			this.tamaño = tamaño;
 		}
 		if (tipo != null && !tipo.equals("")) {
 			this.tipo = tipo;
 		}
 	}
 
+	// Getters y Setters
 	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
-		if (codigo > 0) {
-			this.codigo = codigo;
-		}
-
+	public String getTamaño() {
+		return tamaño;
 	}
 
-	public String getTamanyo() {
-		return tamanyo;
-	}
-
-	public void setTamanyo(String tamanyo) {
-		if (tamanyo != null && !tamanyo.equals("")) {
-			this.tamanyo = tamanyo;
-		}
+	public void setTamaño(String tamaño) {
+		this.tamaño = tamaño;
 	}
 
 	public String getTipo() {
@@ -48,9 +40,7 @@ public class Pizza {
 	}
 
 	public void setTipo(String tipo) {
-		if (tipo != null && !tipo.equals("")) {
-			this.tipo = tipo;
-		}
+		this.tipo = tipo;
 	}
 
 	public String getEstado() {
@@ -58,16 +48,15 @@ public class Pizza {
 	}
 
 	public void setEstado(String estado) {
-		if (estado != null && !estado.equals("")) {
-			this.estado = estado;
-		}
+		this.estado = estado;
 	}
 
+	@Override
 	public String toString() {
 		String cadena = "";
 
 		cadena += "Código: " + this.codigo + "\n";
-		cadena += "Tamaño: " + this.tamanyo + "\n";
+		cadena += "Tamaño: " + this.tamaño + "\n";
 		cadena += "Tipo: " + this.tipo + "\n";
 		cadena += "Estado: " + this.estado + "\n";
 
